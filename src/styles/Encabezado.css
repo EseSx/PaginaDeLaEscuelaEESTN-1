@@ -1,0 +1,53 @@
+.encabezado {
+  background: linear-gradient(
+    135deg,
+    #3b5fb8 20%,
+    #e5e7eb 20%,
+    #e5e7eb 80%,
+    #b91c1c 80%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 15vh;
+  position: relative;
+  top: 0;
+}
+
+.contenedorFragmentoEncabezado {
+  position: absolute;
+  left: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  background-color: rgba(55, 65, 81, 0.8);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  z-index: 10;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-left: 3rem;
+}
+
+.contenedorFragmentoTitulo {
+  text-align: center;
+}
+
+.titulo {
+  color: #374151;
+  font-size: 48px;
+  font-weight: 400;
+  flex-grow: 1;
+  text-align: center;
+  font-family: var(--titulo), sans-serif;
+}

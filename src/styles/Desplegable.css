@@ -1,0 +1,84 @@
+.desplegable-container {
+  padding: 1.5rem;
+}
+
+.desplegable-boton {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.desplegable-contenido {
+  margin-top: 1rem;
+}
+
+.tabla {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid #2d2d2d;
+  padding: 0.5rem;
+}
+
+.tabla th {
+  text-align: center;
+  background-color: #ababab;
+}
+
+.desplegable-boton-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tabla td:nth-child(2) {
+  text-align: center;
+}
+
+.tablaProg th,
+.tablaProg td {
+  border: 1px solid #126a53;
+}
+
+.tablaProg th {
+  background-color: #064e3b;
+}
+
+.tablaElec th,
+.tablaElec td {
+  border: 1px solid #7a3603;
+}
+
+.tablaElec th {
+  background-color: #9e4501;
+}
+
+.tablaQui th,
+.tablaQui td {
+  border: 1px solid #1240a3;
+}
+
+.tablaQui th {
+  background-color: #2563eb;
+}
+
+.tablaEPS th,
+.tablaEPS td {
+  border: 1px solid #5e2b04;
+}
+
+.tablaEPS th {
+  background-color: #b45309;
+}
