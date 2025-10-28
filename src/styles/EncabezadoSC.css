@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+  .encabezado-h1-menu {
+    gap: 2.5rem;
+    margin-right: 6rem;
+  }
+
+  .titulo-orientacion {
+    font-size: 2rem;
+  }
+
+  .encabezado-h1-menu {
+    gap: 0.5rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .encabezado-izquierdo h1 {
+    font-size: 1.5rem;
+  }
+
+  .encabezado-izquierdo .encabezado-logo {
+    width: 1rem;
+    height: auto;
+  }
+
+  .encabezado-izquierdo {
+    padding-left: 0rem;
+  }
+
+  .titulo-orientacion {
+    font-size: 2rem;
+  }
+
+  .encabezado-h1-menu {
+    gap: 2rem;
+    margin-right: 7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .encabezado-izquierdo h1 {
+    font-size: 1rem;
+  }
+
+  .encabezado-izquierdo .encabezado-logo {
+    width: 1rem;
+    height: auto;
+  }
+
+  .encabezado-izquierdo {
+    padding-left: -1rem;
+    justify-content: space-around;
+  }
+
+  .titulo-orientacion {
+    font-size: 1rem;
+  }
+
+  .encabezado-h1-menu {
+    font-size: 1rem;
+    gap: 0.5rem;
+    margin-right: 4rem;
+  }
+}

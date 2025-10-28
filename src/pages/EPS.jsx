@@ -6,6 +6,8 @@ import Desplegable3EPS from "../components/Desplegables/EPS/Desplegable3EPS";
 import Desplegable4EPS from "../components/Desplegables/EPS/Desplegable4EPS";
 import PieDePagina from "../components/PieDePagina";
 
+import "../styles/Orientacion.css";
+
 import { isPrimaryPointer } from "framer-motion";
 
 export default function EPS() {
@@ -25,7 +27,7 @@ export default function EPS() {
       {/* <Carrusel diapositivas={}></Carrusel> */}
       <section className="PresentacionOrientacion">
         <div className="contenedorPresentacion">
-          <h1 className="TituloSeccion">
+          <h1 className="TituloOrientacion">
             Soldadura (EPS,educación profesional secundaria)
           </h1>
           <p className="textoPresentacion">

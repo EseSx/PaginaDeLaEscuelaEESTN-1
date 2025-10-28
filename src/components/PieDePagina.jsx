@@ -3,6 +3,8 @@ import WhatsApp from "../assets/Digital_Glyph_White.png";
 import Facebook from "../assets/Facebook_Logo_Secondary.png";
 import Instagram from "../assets/Instagram_Glyph_White.png";
 
+import "../styles/Footer.css";
+
 export default function PieDePagina() {
   const email = "bibliotecaeest1brandsen@gmail.com";
   const direccion =

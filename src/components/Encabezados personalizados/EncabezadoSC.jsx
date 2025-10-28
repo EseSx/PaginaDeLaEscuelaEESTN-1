@@ -2,15 +2,17 @@ import MenuDesplegable from "../MenuDesplegable";
 import Logo from "../Logo";
 import { color } from "framer-motion";
 
+import "../../styles/EncabezadoSC.css";
+
 export default function EncabezadoSC({ colores, logo, orientacion }) {
   return (
     <header className={`flex h-[8rem] w-full relative ${colores[4]}`}>
       {/* Contenedor del contenido general */}
       <div
-        className={`flex items-center h-full flex-[0.6] ${colores[0]} justify-around relative`}
-        style={{ paddingLeft: "2rem" }}
+        className={`flex items-center h-full flex-[0.6] ${colores[0]} justify-around relative encabezado-izquierdo`}
+        style={{ paddingLeft: "1rem" }}
       >
-        <Logo />
+        <Logo className="encabezado-logo" />
         <h1
           className="font-bold text-[2rem]"
           style={{ fontfamily: "var(--titulo-secundario)" }}
@@ -54,15 +56,15 @@ export default function EncabezadoSC({ colores, logo, orientacion }) {
       <div
         className={`flex items-center px-4 h-[6rem] justify-around flex-1 ${colores[0]} relative`}
       >
-        <h1 className="flex items-center gap-15">
+        <h1 className="flex items-center gap-15 encabezado-h1-menu">
           <span
             className="material-symbols-outlined "
-            style={{ fontSize: "3rem" }}
+            style={{ fontSize: "2.5rem" }}
           >
             {logo}
           </span>
           <span
-            className="text-[2rem]"
+            className="titulo-orientacion"
             style={{ fontFamily: "var(--titulo-secundario)" }}
           >
             {orientacion}

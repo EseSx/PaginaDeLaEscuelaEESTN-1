@@ -3,9 +3,9 @@
 =========================== */
 
 .seccionPresentacion {
-  padding: 60px 30px;
-  background-color: #f9f9f9;
-  text-align: center;
+  background-color: #fafafa;
+  padding: 80px 10%;
+  color: #374151;
 }
 
 .contenedorPresentacion {
@@ -25,8 +25,9 @@
 =========================== */
 
 .seccionServicios {
-  padding: 60px 30px;
-  background-color: #e0e0e0;
+  padding: 80px 5%;
+  background: #f3f4f6;
+  text-align: center;
 }
 
 .contenedorServicios {
@@ -62,15 +63,30 @@
   gap: 1rem;
   text-decoration: none;
   font-family: var(--titulo), sans-serif;
+  position: relative;
 }
 
 .tarjetaServicio:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(30, 58, 138, 0.4);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .tarjetaServicio:active {
   transform: translateY(-2px) scale(1.02);
+}
+
+.tarjetaServicio::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tarjetaServicio:hover::after {
+  opacity: 1;
 }
 
 .cicloBasico {
@@ -95,4 +111,183 @@
 
 .logoServicio {
   font-size: 3rem;
+}
+
+.bloqueHistoria,
+.bloqueMision {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  transition: transform 0.3s ease;
+  font-family: var(--texto), sans-serif;
+}
+
+.bloqueHistoria:hover,
+.bloqueMision:hover {
+  transform: translateY(-5px);
+}
+
+.subtituloSeccion {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.textoIntroServicios {
+  color: #4b5563;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.tituloTarjeta {
+  margin-top: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* ===========================
+   HOME - RESPONSIVE
+=========================== */
+
+/* Tablets grandes / 1024px */
+@media (max-width: 1024px) {
+  .seccionPresentacion {
+    padding: 60px 8%;
+  }
+
+  .contenedorPresentacion {
+    margin: 0 10vw;
+  }
+
+  .bloqueHistoria,
+  .bloqueMision {
+    padding: 1.5rem;
+  }
+
+  .bloqueHistoria p,
+  .bloqueMision p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .seccionServicios {
+    padding: 60px 4%;
+  }
+
+  .contenedorServicios {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .tarjetaServicio {
+    width: 200px;
+    height: 280px;
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+
+  .logoServicio {
+    font-size: 2.5rem;
+  }
+
+  .textoIntroServicios {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets pequeñas / 768px */
+@media (max-width: 768px) {
+  .seccionPresentacion {
+    padding: 50px 6%;
+  }
+
+  .contenedorPresentacion {
+    margin: 0 5vw;
+  }
+
+  .bloqueHistoria,
+  .bloqueMision {
+    padding: 1rem;
+  }
+
+  .bloqueHistoria p,
+  .bloqueMision p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .seccionServicios {
+    padding: 50px 3%;
+  }
+
+  .contenedorServicios {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .tarjetaServicio {
+    width: 180px;
+    height: 260px;
+    padding: 25px 12px;
+    font-size: 15px;
+  }
+
+  .logoServicio {
+    font-size: 2rem;
+  }
+
+  .textoIntroServicios {
+    font-size: 0.95rem;
+  }
+}
+
+/* Móviles / pantallas muy pequeñas 480px */
+@media (max-width: 480px) {
+  .seccionPresentacion {
+    padding: 30px 4%;
+  }
+
+  .contenedorPresentacion {
+    margin: 0 3vw;
+  }
+
+  .bloqueHistoria,
+  .bloqueMision {
+    padding: 0.8rem;
+  }
+
+  .bloqueHistoria p,
+  .bloqueMision p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .seccionServicios {
+    padding: 30px 2%;
+  }
+
+  .contenedorServicios {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .tarjetaServicio {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 25px 15px;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  .logoServicio {
+    font-size: 2rem;
+  }
+
+  .textoIntroServicios {
+    font-size: 0.9rem;
+  }
 }

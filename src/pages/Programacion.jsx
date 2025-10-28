@@ -6,7 +6,7 @@ import Desplegable6toP from "../components/Desplegables/Programacion/Desplegable
 import Desplegable7moP from "../components/Desplegables/Programacion/Desplegable7moP";
 import PieDePagina from "../components/PieDePagina";
 
-import "../styles/Programacion.css";
+import "../styles/Orientacion.css";
 import { isPrimaryPointer } from "framer-motion";
 
 export default function Programacion() {
@@ -26,7 +26,7 @@ export default function Programacion() {
       {/* <Carrusel diapositivas={}></Carrusel> */}
       <section className="PresentacionOrientacion">
         <div className="contenedorPresentacion">
-          <h1 className="TituloSeccion">Programación</h1>
+          <h1 className="TituloOrientacion">Programación</h1>
           <p className="textoPresentacion">
             La tecnicatura forma profesionales capaces de desarrollar programas
             y componentes de sistemas informáticos. Su objetivo es preparar

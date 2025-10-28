@@ -1,15 +1,17 @@
 import MenuDesplegable from "../MenuDesplegable";
 import Logo from "../Logo";
 
+import "../../styles/EncabezadoCB.css";
+
 export default function EncabezadoCB() {
   return (
     <header className="flex h-[8rem] w-full relative">
       {/* Contenedor del contenido general */}
       <div
-        className="flex items-center h-full flex-[0.6] bg-[#e5e7eb] justify-around relative"
-        style={{ paddingLeft: "2rem" }}
+        className="flex items-center h-full flex-[0.6] bg-[#e5e7eb] justify-around relative encabezado-izquierdo"
+        style={{ paddingLeft: "1rem" }}
       >
-        <Logo />
+        <Logo className="encabezado-logo" />
         <h1 className="font-bold text-[2rem]">E.E.S.T.N°1</h1>
         <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#3b5fb8] to-[#69467E]"></div>
       </div>
@@ -46,14 +48,14 @@ export default function EncabezadoCB() {
 
       {/* Contenedor del contenido particular */}
       <div className="flex items-center px-4 h-[6rem] justify-around flex-1 bg-[#e5e7eb] relative">
-        <h1 className="flex items-center gap-15">
+        <h1 className="flex items-center gap-15 encabezado-h1-menu">
           <span
             className="material-symbols-outlined "
             style={{ fontSize: "3rem" }}
           >
             auto_stories
           </span>
-          <span className="text-[2rem]">Ciclo Basico</span>
+          <span className="">Ciclo Basico</span>
         </h1>
         <MenuDesplegable />
         <div className="absolute bottom-[-1px] left-0 w-full h-2 bg-gradient-to-r from-[#91324E] to-[#b91c1c]"></div>

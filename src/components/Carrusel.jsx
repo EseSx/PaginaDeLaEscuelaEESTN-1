@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import "../styles/App.css";
 
 function Carrusel({ diapositivas }) {
@@ -9,11 +8,14 @@ function Carrusel({ diapositivas }) {
     setIndiceActual((prev) => (prev + 1) % diapositivas.length);
   };
 
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      mostrarSiguiente();
-    }, 3000);
+  const mostrarAnterior = () => {
+    setIndiceActual((prev) =>
+      prev === 0 ? diapositivas.length - 1 : prev - 1
+    );
+  };
 
+  useEffect(() => {
+    const intervalo = setInterval(mostrarSiguiente, 5000);
     return () => clearInterval(intervalo);
   }, [diapositivas.length]);
 
@@ -25,10 +27,28 @@ function Carrusel({ diapositivas }) {
           className={`diapositivaCarrusel ${
             indice === indiceActual ? "activa" : ""
           }`}
+          style={{ backgroundImage: `url(${diapositiva})` }}
         >
-          <img src={diapositiva} alt={`Diapositiva ${indice}`} />
+          <div className="overlayCarrusel"></div>
         </div>
       ))}
+
+      <button className="botonCarrusel anterior" onClick={mostrarAnterior}>
+        ❮
+      </button>
+      <button className="botonCarrusel siguiente" onClick={mostrarSiguiente}>
+        ❯
+      </button>
+
+      <div className="indicadoresCarrusel">
+        {diapositivas.map((_, i) => (
+          <span
+            key={i}
+            className={`indicador ${i === indiceActual ? "activo" : ""}`}
+            onClick={() => setIndiceActual(i)}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 }

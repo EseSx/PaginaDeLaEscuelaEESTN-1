@@ -5,7 +5,7 @@ import Desplegable2doCB from "../components/Desplegables/Ciclo Basico/Desplegabl
 import Desplegable3roCB from "../components/Desplegables/Ciclo Basico/Desplegable3roCB";
 import PieDePagina from "../components/PieDePagina";
 
-import "../styles/CicloBasico.css";
+import "../styles/Orientacion.css";
 
 export default function CicloBasico() {
   return (
@@ -14,7 +14,7 @@ export default function CicloBasico() {
       {/* <Carrusel diapositivas={}></Carrusel> */}
       <section className="PresentacionOrientacion">
         <div className="contenedorPresentacion">
-          <h1 className="TituloSeccion">Ciclo Basico</h1>
+          <h1 className="TituloOrientacion">Ciclo Basico</h1>
           <p className="textoPresentacion">
             El ciclo básico es el inicio del ciclo formativo que ofrece nuestra
             escuela (1° año – 3° año), donde los alumnos combinan las materias

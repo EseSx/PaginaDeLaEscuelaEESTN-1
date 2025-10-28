@@ -27,9 +27,24 @@ export default function Desplegable4toQ() {
       <AnimatePresence>
         {abierto && (
           <motion.div
-            initial={{ height: 0, scaleY: 0, transformOrigin: "top" }}
-            animate={{ height: "auto", scaleY: 1, transformOrigin: "top" }}
-            exit={{ height: 0, scaleY: 0, transformOrigin: "bottom" }}
+            initial={{
+              height: 0,
+              scaleY: 0,
+              opacity: 0,
+              transformOrigin: "top",
+            }}
+            animate={{
+              height: "auto",
+              scaleY: 1,
+              opacity: 1,
+              transformOrigin: "top",
+            }}
+            exit={{
+              height: 0,
+              scaleY: 0,
+              opacity: 0,
+              transformOrigin: "bottom",
+            }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="desplegable-contenido"
           >

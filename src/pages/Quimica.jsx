@@ -6,7 +6,7 @@ import Desplegable6toQ from "../components/Desplegables/Quimica/Desplegable6toQ"
 import Desplegable7moQ from "../components/Desplegables/Quimica/Desplegable7moQ";
 import PieDePagina from "../components/PieDePagina";
 
-import "../styles/Electromecanica.css";
+import "../styles/Orientacion.css";
 import { isPrimaryPointer } from "framer-motion";
 
 export default function Quimica() {
@@ -26,7 +26,7 @@ export default function Quimica() {
       {/* <Carrusel diapositivas={}></Carrusel> */}
       <section className="PresentacionOrientacion">
         <div className="contenedorPresentacion">
-          <h1 className="TituloSeccion">Química</h1>
+          <h1 className="TituloOrientacion">Química</h1>
           <p className="textoPresentacion">
             La tecnicatura en química forma técnicos capacitados para trabajar
             en laboratorios, plantas industriales y servicios vinculados al

@@ -6,7 +6,7 @@ import Desplegable6toE from "../components/Desplegables/Electromecanica/Desplega
 import Desplegable7moE from "../components/Desplegables/Electromecanica/Desplegable7moE";
 import PieDePagina from "../components/PieDePagina";
 
-import "../styles/Electromecanica.css";
+import "../styles/Orientacion.css";
 import { isPrimaryPointer } from "framer-motion";
 
 export default function Electromecanica() {
@@ -26,7 +26,7 @@ export default function Electromecanica() {
       {/* <Carrusel diapositivas={}></Carrusel> */}
       <section className="PresentacionOrientacion">
         <div className="contenedorPresentacion">
-          <h1 className="TituloSeccion">Electromecánica</h1>
+          <h1 className="TituloOrientacion">Electromecánica</h1>
           <p className="textoPresentacion">
             La tecnicatura en Electromecánica forma profesionales con
             conocimientos en mecánica, electricidad y automatización, preparados

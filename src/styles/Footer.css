@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+  footer {
+    padding: 1rem 2rem;
+    height: 150px;
+  }
+
+  /* Ajustar el logo de forma independiente */
+  footer > div:first-child img {
+    height: 400px;
+  }
+
+  /* Otros divs */
+  footer > div:not(:first-child) {
+    padding-inline: 1rem !important;
+  }
+
+  footer h1 {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  /* Íconos de redes sociales */
+  footer img:not(:first-child) {
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0.8rem 1.5rem;
+    height: 130px;
+  }
+
+  footer h1 {
+    font-size: 0.85rem;
+  }
+
+  footer img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 0.5rem 2rem;
+    height: 110px;
+  }
+
+  /* Texto */
+  footer h1 {
+    font-size: 0.75rem;
+  }
+
+  /* Logo a la izquierda */
+  footer > div:first-child img {
+    height: 80px;
+  }
+
+  /* Íconos de redes sociales */
+  footer > div:last-child img {
+    height: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}

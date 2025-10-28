@@ -4,20 +4,17 @@ import Logo from "./Logo";
 import "../styles/index.css";
 import "../styles/Encabezado.css";
 
-export default function Encabezado({ orientacion }) {
+export default function Encabezado() {
   return (
     <header className="encabezado">
-      <div className="contenedorFragmentoEncabezado h-full">
+      <div className="contenedorLogo">
         <Logo />
       </div>
-      <div className="contenedorFragmentoTitulo">
-        <h1
-          className="titulo"
-          style={{ fontSize: orientacion ? "40px" : "48px" }}
-        >
-          E.E.S.T N°1 "Ing. Jose R. Cantón" {orientacion}
-        </h1>
+
+      <div className="contenedorTitulo">
+        <h1 className="titulo">E.E.S.T N°1 "Ing. José R. Cantón"</h1>
       </div>
+
       <MenuDesplegable />
     </header>
   );
