@@ -1,11 +1,31 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #bcd2ee;
+}
+
 .contenedorLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: auto;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(168, 168, 168);
+  min-height: 100dvh; /* usa dvh (viewport dinámico) para móviles */
+  width: 100%;
+  background-color: #bcd2ee;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoLogin {
+  position: absolute;
+  top: 4rem;
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .texto {
@@ -13,22 +33,7 @@
   top: 20rem;
   font-size: 2.5rem;
   font-family: var(--titulo);
-}
-
-.logoLogin {
-  background-color: rgba(55, 65, 81, 0.8);
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  position: absolute;
-  z-index: 10;
-  height: 10rem;
-  width: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  top: 5rem;
+  color: #ffffff;
 }
 
 .contenedorFormulario {
@@ -40,25 +45,48 @@
   width: 25vw;
 }
 
+.seccionFormulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
 .peticion {
   font-size: 1.5rem;
   font-family: var(--titulo-secundario);
-}
-
-.seccionFormulario {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  color: #ffffff;
 }
 
 .inputFormulario {
   width: 100%;
   height: 2.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid #465669;
   font-size: 1rem;
+  background-color: #ebf2fa;
+  color: #222;
+}
+
+.inputFormulario::placeholder {
+  color: #f0f0f0;
+}
+
+.inputPasswordContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.iconoOjo {
+  position: absolute;
+  right: 0.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #465669;
+  font-size: 1.1rem;
 }
 
 .botonFormulario {
@@ -67,6 +95,76 @@
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  border: 0 solid transparent;
   width: 10vw;
+  border: none;
+  background: linear-gradient(135deg, #7c92ac, #465669);
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.botonFormulario:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.errorMensaje {
+  position: absolute;
+  bottom: 8rem;
+  color: red;
+  font-weight: bold;
+}
+
+/* Laptops pequeñas / pantallas medianas - hasta 1024px */
+@media (max-width: 1024px) {
+  .logoLogin {
+    height: 15rem;
+    width: 15rem;
+    top: 3.5rem;
+  }
+
+  .texto {
+    top: 18rem;
+    font-size: 2.2rem;
+  }
+
+  .contenedorFormulario {
+    width: 40vw;
+    top: 48vh;
+  }
+
+  .peticion {
+    font-size: 1.3rem;
+  }
+
+  .botonFormulario {
+    width: 20vw;
+    bottom: 9rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets - hasta 768px */
+@media (max-width: 768px) {
+  .logoLogin {
+    height: 12rem;
+    width: 12rem;
+    top: 3rem;
+  }
+
+  .texto {
+    top: 15rem;
+    font-size: 2rem;
+  }
+
+  .contenedorFormulario {
+    width: 60vw;
+    top: 45vh;
+  }
+
+  .botonFormulario {
+    width: 30vw;
+    bottom: 8rem;
+  }
 }

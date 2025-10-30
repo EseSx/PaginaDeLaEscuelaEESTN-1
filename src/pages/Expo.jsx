@@ -1,4 +1,11 @@
 import PieDePagina from "../components/PieDePagina";
+import Telon from "../components/Telon";
+
 export default function Expo() {
-  return <PieDePagina />;
+  return (
+    <>
+      <Telon />
+      <PieDePagina />;
+    </>
+  );
 }

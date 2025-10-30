@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Carrusel from "../components/Carrusel";
 import MenuDesplegable from "../components/MenuDesplegable";
+import Logo from "../components/Logo";
 
 import "../styles/Login.css";
 
@@ -9,6 +9,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [mostrarPassword, setMostrarPassword] = useState(false);
 
   const handleLogin = async () => {
     try {
@@ -34,7 +35,9 @@ export default function Login() {
   return (
     <div className="contenedorLogin">
       <MenuDesplegable buttonClass="loginStyle" />
-      <div className="logoLogin">logo</div>
+      <div className="logoLogin">
+        <Logo />
+      </div>
       <h2 className="texto">Iniciar sesión</h2>
       <div className="contenedorFormulario">
         <label htmlFor="" className="seccionFormulario">
@@ -47,21 +50,32 @@ export default function Login() {
             className="inputFormulario"
           />
         </label>
-        <label htmlFor="" className="seccionFormulario">
+        <label className="seccionFormulario">
           <p className="peticion">Contraseña</p>
-          <input
-            type="password"
-            placeholder="Contraseña"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="inputFormulario"
-          />
+          <div className="inputPasswordContainer">
+            <input
+              type={mostrarPassword ? "text" : "password"}
+              placeholder="Contraseña"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="inputFormulario"
+            />
+            <span
+              className="material-symbols-outlined iconoOjo"
+              onClick={() => setMostrarPassword(!mostrarPassword)}
+              title={
+                mostrarPassword ? "Ocultar contraseña" : "Mostrar contraseña"
+              }
+            >
+              {mostrarPassword ? "visibility_off" : "visibility"}
+            </span>
+          </div>
         </label>
       </div>
       <button className="botonFormulario" onClick={handleLogin}>
         Login
       </button>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="errorMensaje">{error}</p>}
     </div>
   );
 }
