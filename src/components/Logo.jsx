@@ -1,4 +1,4 @@
-import LogoEscuela from "../assets/LogoEESTN1.png";
+import LogoEscuela from "../assets/Icons/LogoEESTN1.png";
 
 import "../styles/Encabezado.css";
 

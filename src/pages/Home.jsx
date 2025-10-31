@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import "../styles/App.css";
 
-import tuerca from "../assets/tuerca.jpg";
-import matraz from "../assets/matraz.jpg";
-import computadora from "../assets/computadora.jpg";
+import tuerca from "../assets/Carrusel/Principal/tuerca.jpg";
+import matraz from "../assets/Carrusel/Principal/matraz.jpg";
+import computadora from "../assets/Carrusel/Principal/computadora.jpg";
 
 import Carrusel from "../components/Carrusel";
 import Noticias from "../components/Noticias";

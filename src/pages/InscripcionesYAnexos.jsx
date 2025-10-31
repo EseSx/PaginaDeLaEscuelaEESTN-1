@@ -2,7 +2,7 @@ import PieDePagina from "../components/PieDePagina";
 import Logo from "../components/Logo";
 import MenuDesplegable from "../components/MenuDesplegable";
 
-import ArchivoPrueba from "../assets/Prueba de pagina anexos y mas.pdf";
+import ArchivoPrueba from "../assets/Archivos/Prueba de pagina anexos y mas.pdf";
 import "../styles/InscripcionesYAnexos.css";
 
 export default function InscripcionesYAnexos() {

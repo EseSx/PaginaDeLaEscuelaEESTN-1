@@ -1,7 +1,7 @@
 import Logo from "./Logo";
-import WhatsApp from "../assets/Digital_Glyph_White.png";
-import Facebook from "../assets/Facebook_Logo_Secondary.png";
-import Instagram from "../assets/Instagram_Glyph_White.png";
+import WhatsApp from "../assets/Icons/Digital_Glyph_White.png";
+import Facebook from "../assets/Icons/Facebook_Logo_Secondary.png";
+import Instagram from "../assets/Icons/Instagram_Glyph_White.png";
 
 import "../styles/Footer.css";
 
