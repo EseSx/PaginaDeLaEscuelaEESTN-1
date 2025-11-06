@@ -59,6 +59,8 @@ header .MenuDesplegable {
 }
 
 .logoEscuela {
+  position: relative;
+  z-index: 1;
   max-height: 95%;
   width: auto;
   display: block;

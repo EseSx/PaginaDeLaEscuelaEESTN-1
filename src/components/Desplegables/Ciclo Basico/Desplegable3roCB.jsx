@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, color } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "../../../styles/Desplegable.css";
 
@@ -7,6 +7,7 @@ export default function Desplegable3roCB() {
 
   return (
     <div className="desplegable-container">
+      {/* Botón principal que abre o cierra el contenido */}
       <div className="desplegable-boton-container">
         <motion.button
           onClick={() => setAbierto(!abierto)}
@@ -18,104 +19,86 @@ export default function Desplegable3roCB() {
           className="desplegable-boton text-[1.5rem]"
           style={{ backgroundColor: "#b91c1c" }}
         >
+          {/* Cambia el texto según el estado */}
           {abierto ? "3° AÑO DE EDUCACIÓN SECUNDARIA TÉCNICA" : "3° AÑO"}
         </motion.button>
       </div>
 
+      {/* Contenido animado del desplegable */}
       <AnimatePresence>
         {abierto && (
           <motion.div
-            initial={{ height: 0, scaleY: 0, transformOrigin: "top" }}
-            animate={{ height: "auto", scaleY: 1, transformOrigin: "top" }}
-            exit={{ height: 0, scaleY: 0, transformOrigin: "bottom" }}
+            initial={{ height: 0, scaleY: 0, originY: 0 }}
+            animate={{ height: "auto", scaleY: 1, originY: 0 }}
+            exit={{ height: 0, scaleY: 0, originY: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="desplegable-contenido"
           >
             <table className="tabla">
-              <thead className="tabla-thead">
+              <thead>
                 <tr>
                   <th colSpan="2">3° AÑO DE EDUCACIÓN SECUNDARIA TÉCNICA</th>
                 </tr>
               </thead>
+
               <tbody>
                 <tr>
                   <th colSpan="2" className="subtitulo">
-                    Formación General y Formación Científico Tecnológica
+                    Formación General y Científico Tecnológica
                   </th>
                 </tr>
-                <tr>
-                  <td>Biología</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Construcción de Ciudadanía</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Educación Artística</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Educación Física</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Físico Química</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Geografía</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Historia</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Inglés</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Matemática</td>
-                  <td>4 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Prácticas del Lenguaje</td>
-                  <td>4 Módulos semanales</td>
-                </tr>
+
+                {/* Materias generales */}
+                {[
+                  ["Biología", "2 Módulos semanales"],
+                  ["Construcción de Ciudadanía", "2 Módulos semanales"],
+                  ["Educación Artística", "2 Módulos semanales"],
+                  ["Educación Física", "2 Módulos semanales"],
+                  ["Físico Química", "2 Módulos semanales"],
+                  ["Geografía", "2 Módulos semanales"],
+                  ["Historia", "2 Módulos semanales"],
+                  ["Inglés", "2 Módulos semanales"],
+                  ["Matemática", "4 Módulos semanales"],
+                  ["Prácticas del Lenguaje", "4 Módulos semanales"],
+                ].map(([materia, carga]) => (
+                  <tr key={materia}>
+                    <td>{materia}</td>
+                    <td>{carga}</td>
+                  </tr>
+                ))}
+
                 <tr>
                   <th></th>
-                  <th>Cantidad de módulos semanales: 24</th>
+                  <th>Subtotal: 24 módulos semanales</th>
                 </tr>
+
                 <tr>
                   <th colSpan="2" className="subtitulo">
-                    Formación Científico Tecnológica y Formación Técnico
-                    Específica
+                    Formación Técnico Específica
                   </th>
                 </tr>
-                <tr>
-                  <td>Procedimientos Técnicos</td>
-                  <td>72 horas reloj anual</td>
-                </tr>
-                <tr>
-                  <td>Lenguajes Tecnológicos</td>
-                  <td>72 horas reloj anual</td>
-                </tr>
-                <tr>
-                  <td>Sistemas Tecnológicos</td>
-                  <td>144 horas reloj anual</td>
-                </tr>
+
+                {/* Materias técnicas */}
+                {[
+                  ["Procedimientos Técnicos", "72 horas reloj anual"],
+                  ["Lenguajes Tecnológicos", "72 horas reloj anual"],
+                  ["Sistemas Tecnológicos", "144 horas reloj anual"],
+                ].map(([materia, carga]) => (
+                  <tr key={materia}>
+                    <td>{materia}</td>
+                    <td>{carga}</td>
+                  </tr>
+                ))}
+
                 <tr>
                   <th></th>
-                  <th>Cantidad de módulos semanales: 8</th>
+                  <th>Subtotal: 8 módulos semanales</th>
                 </tr>
               </tbody>
+
               <tfoot>
                 <tr>
-                  <th colSpan="2">
-                    Cantidad total de módulos semanales de 3° año de la
-                    Educación Secundaria: 32
-                  </th>
+                  <th colSpan="2">Total general: 32 módulos semanales</th>
                 </tr>
               </tfoot>
             </table>

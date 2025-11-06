@@ -8,12 +8,14 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  z-index: 998;
+  z-index: 999;
 }
 
 .superposicionMenu.activo {
+  position: relative;
   opacity: 1;
   visibility: visible;
+  z-index: 999;
 }
 
 .menuDesplegable {
@@ -186,8 +188,10 @@
 }
 
 .superposicionMenu.activo {
+  position: fixed;
   opacity: 1;
   visibility: visible;
+  z-index: 997;
 }
 
 .InsAnex {

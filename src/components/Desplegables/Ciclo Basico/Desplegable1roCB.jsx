@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, color } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "../../../styles/Desplegable.css";
 
@@ -7,6 +7,7 @@ export default function Desplegable1roCB() {
 
   return (
     <div className="desplegable-container">
+      {/* Botón que abre o cierra el desplegable */}
       <div className="desplegable-boton-container">
         <motion.button
           onClick={() => setAbierto(!abierto)}
@@ -18,93 +19,82 @@ export default function Desplegable1roCB() {
           className="desplegable-boton text-[1.5rem]"
           style={{ backgroundColor: "#3b5fb8" }}
         >
+          {/* Cambia el texto según si está abierto o cerrado */}
           {abierto ? "1° AÑO DE EDUCACIÓN SECUNDARIA TÉCNICA" : "1° AÑO"}
         </motion.button>
       </div>
 
+      {/* Contenedor animado del contenido interno */}
       <AnimatePresence>
         {abierto && (
           <motion.div
-            initial={{ height: 0, scaleY: 0, transformOrigin: "top" }}
-            animate={{ height: "auto", scaleY: 1, transformOrigin: "top" }}
-            exit={{ height: 0, scaleY: 0, transformOrigin: "bottom" }}
+            initial={{ height: 0, scaleY: 0, originY: 0 }}
+            animate={{ height: "auto", scaleY: 1, originY: 0 }}
+            exit={{ height: 0, scaleY: 0, originY: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="desplegable-contenido"
           >
             <table className="tabla">
-              <thead className="tabla-thead">
+              <thead>
                 <tr>
                   <th colSpan="2">1° AÑO DE EDUCACIÓN SECUNDARIA TÉCNICA</th>
                 </tr>
               </thead>
+
               <tbody>
                 <tr>
                   <th colSpan="2" className="subtitulo">
-                    Formación General y Formación Científico Tecnológica
+                    Formación General y Científico Tecnológica
                   </th>
                 </tr>
-                <tr>
-                  <td>Ciencias Naturales</td>
-                  <td>4 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Ciencias Sociales</td>
-                  <td>4 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Educación Artística</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Inglés</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Matemática</td>
-                  <td>4 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Prácticas del Lenguaje</td>
-                  <td>4 Módulos semanales</td>
-                </tr>
-                <tr>
-                  <td>Construcción Ciudadana</td>
-                  <td>2 Módulos semanales</td>
-                </tr>
+
+                {/* Lista de materias */}
+                {[
+                  ["Ciencias Naturales", "4 Módulos semanales"],
+                  ["Ciencias Sociales", "4 Módulos semanales"],
+                  ["Educación Artística", "2 Módulos semanales"],
+                  ["Inglés", "2 Módulos semanales"],
+                  ["Matemática", "4 Módulos semanales"],
+                  ["Prácticas del Lenguaje", "4 Módulos semanales"],
+                  ["Construcción Ciudadana", "2 Módulos semanales"],
+                ].map(([materia, carga]) => (
+                  <tr key={materia}>
+                    <td>{materia}</td>
+                    <td>{carga}</td>
+                  </tr>
+                ))}
+
                 <tr>
                   <th></th>
-                  <th>Cantidad de módulos semanales: 24</th>
+                  <th>Subtotal: 24 módulos semanales</th>
                 </tr>
 
                 <tr>
                   <th colSpan="2" className="subtitulo">
-                    Formación Científico Tecnológica y Formación Técnico
-                    Específica
+                    Formación Técnico Específica
                   </th>
                 </tr>
-                <tr>
-                  <td>Procedimientos Técnicos</td>
-                  <td>72 horas reloj anual</td>
-                </tr>
-                <tr>
-                  <td>Lenguajes Tecnológicos</td>
-                  <td>72 horas reloj anual</td>
-                </tr>
-                <tr>
-                  <td>Sistemas Tecnológicos</td>
-                  <td>72 horas reloj anual</td>
-                </tr>
+
+                {[
+                  ["Procedimientos Técnicos", "72 horas reloj anual"],
+                  ["Lenguajes Tecnológicos", "72 horas reloj anual"],
+                  ["Sistemas Tecnológicos", "72 horas reloj anual"],
+                ].map(([materia, carga]) => (
+                  <tr key={materia}>
+                    <td>{materia}</td>
+                    <td>{carga}</td>
+                  </tr>
+                ))}
+
                 <tr>
                   <th></th>
-                  <th>Cantidad de módulos semanales: 6</th>
+                  <th>Subtotal: 6 módulos semanales</th>
                 </tr>
               </tbody>
+
               <tfoot>
                 <tr>
-                  <th colSpan="2">
-                    Cantidad total de módulos semanales de 1° año de la
-                    Educación Secundaria: 30
-                  </th>
+                  <th colSpan="2">Total general: 30 módulos semanales</th>
                 </tr>
               </tfoot>
             </table>

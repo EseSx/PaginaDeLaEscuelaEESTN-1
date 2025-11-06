@@ -1,0 +1,28 @@
+.estrellas {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.estrella {
+  position: absolute;
+  background-color: #ffd700;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: parpadeo 3s infinite ease-in-out;
+  filter: blur(1px);
+}
+
+@keyframes parpadeo {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
